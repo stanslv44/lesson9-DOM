@@ -4,84 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM Manipulation</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <style>
-    *,
-    *::before,
-    *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      padding: 0 15px;
-    }
-    section {
-      margin-bottom: 80px;
-    }
-    header,
-    footer {
-      padding: 50px 0;
-    }
-    h2 {
-      margin-bottom: 20px;
-    }
-    textarea {
-      width: 100%;
-    }
-    .cont {
-      margin-top: 40px;
-    }
-    #menu-btn {
-      font-size: 40px;
-      font-weight: 900;
-      width: 50px;
-      height: 50px;
-      padding: 0;
-      line-height: 30px;
-    }
-    .accordeon {
-      margin-bottom: 20px;
-    }
-
-    .accordeon-text {
-      display: none;
-    }
-
-    .accordeon-text.open {
-      display: block;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav {
-      display: none;
-    }
-    nav.open {
-      display: block;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 10px;
-    }
-    footer {
-      margin-top: 500px;
-    }
-
-    .cont {
-      display: none;
-    }
-  </style>
   <body>
     <header>
       <h1 class="heading-class" id="heading-id" data-test="heading-test">

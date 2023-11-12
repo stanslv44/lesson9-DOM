@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 0 15px;
+}
+section {
+  margin-bottom: 80px;
+}
+header,
+footer {
+  padding: 50px 0;
+}
+h2 {
+  margin-bottom: 20px;
+}
+textarea {
+  width: 100%;
+}
+.cont {
+  margin-top: 40px;
+}
+#menu-btn {
+  font-size: 40px;
+  font-weight: 900;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  line-height: 30px;
+}
+.accordeon {
+  margin-bottom: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+footer {
+  margin-top: 500px;
+}
+
+/* Плавная прокрутка */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Раскрывающееся меню*/
+nav {
+  display: none;
+}
+nav.open {
+  display: block;
+}
+
+/* Аккордеон*/
+.accordeon-text {
+  display: none;
+}
+
+.accordeon-text.open {
+  display: block;
+}
+
+/* Табы */
+
+.cont {
+  display: none;
+}
