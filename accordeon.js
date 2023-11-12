@@ -12,12 +12,12 @@ accordeonBtns.forEach((btn) => {
     // Если у текста соответстующего нажимаемой кнопке уже есть класс open,
     // То есть мы хотим просто закрыть открытый аккордеон
     if (targetText.classList.contains("open")) {
-      // То просто его убираем
+      // То просто убираем класс
       targetText.classList.remove("open");
 
-      // Если же нет
+      // Если же класса нет
     } else {
-      // То убираем этот класс у всех
+      // То убираем этот класс у всех текстов
       accordeonTexts.forEach((text) => {
         text.classList.remove("open");
       });
