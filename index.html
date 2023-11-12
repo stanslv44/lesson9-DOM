@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+  </head>
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      padding: 0 15px;
+    }
+    section {
+      margin-bottom: 80px;
+    }
+    header,
+    footer {
+      padding: 50px 0;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    textarea {
+      width: 100%;
+    }
+    .cont {
+      margin-top: 40px;
+    }
+    #menu-btn {
+      font-size: 40px;
+      font-weight: 900;
+      width: 50px;
+      height: 50px;
+      padding: 0;
+      line-height: 30px;
+    }
+    .accordeon {
+      margin-bottom: 20px;
+    }
+
+    .accordeon-text {
+      display: none;
+    }
+
+    .accordeon-text.open {
+      display: block;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav {
+      display: none;
+    }
+    nav.open {
+      display: block;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+    }
+    footer {
+      margin-top: 500px;
+    }
+
+    .cont {
+      display: none;
+    }
+  </style>
+  <body>
+    <header>
+      <h1 class="heading-class" id="heading-id" data-test="heading-test">
+        DOM Manipulation
+      </h1>
+      <nav>
+        <ul>
+          <li>
+            <button class="menu-btn" data-target="acc-section">
+              Accordeon
+            </button>
+          </li>
+          <li>
+            <button class="menu-btn" data-target="tabs-section">Tabs</button>
+          </li>
+          <li>
+            <button class="menu-btn" data-target="count-section">
+              Word/Character count
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <button id="menu-btn" class="qwer asdf">M</button>
+    </header>
+
+    <section id="acc-section">
+      <h2>Accordeon</h2>
+      <div class="accordeon">
+        <button class="accordeon-btn" id="acc-btn1">Button 1</button>
+        <div class="accordeon-text" id="acc-text1">
+          Accordeon text 1 Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Amet culpa asperiores placeat incidunt? Deserunt pariatur
+          corrupti excepturi! Dignissimos, ab aperiam.
+        </div>
+      </div>
+      <div class="accordeon">
+        <button class="accordeon-btn" id="acc-btn2">Button 2</button>
+        <div class="accordeon-text" id="acc-text2">
+          Accordeon text 2 Sit amet, consectetur adipisicing elit. Amet culpa
+          asperiores placeat incidunt? Deserunt pariatur corrupti excepturi!
+          Dignissimos, ab aperiam.
+        </div>
+      </div>
+      <div class="accordeon">
+        <button class="accordeon-btn" id="acc-btn3">Button 3</button>
+        <div class="accordeon-text" id="acc-text3">
+          Accordeon text 3 Ipsum dolor sit amet, consectetur adipisicing elit.
+          Amet culpa asperiores placeat incidunt? Deserunt pariatur corrupti
+          excepturi! Dignissimos, ab aperiam.
+        </div>
+      </div>
+    </section>
+
+    <section id="tabs-section">
+      <h2>Tabs</h2>
+      <div>
+        <button class="tab" id="tab1">Tab 1</button>
+        <button class="tab" id="tab2">Tab 2</button>
+        <button class="tab" id="tab3">Tab 3</button>
+      </div>
+      <div>
+        <div class="cont" id="cont1">
+          <h3>Content 1</h3>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi sit
+          odio odit ab voluptatum quas exercitationem corporis accusantium
+          aspernatur architecto. Iure officiis commodi neque exercitationem,
+          minus corporis nobis consequuntur necessitatibus.
+        </div>
+        <div class="cont" id="cont2">
+          <h3>Content 2</h3>
+          Eligendi sit odio odit ab voluptatum quas exercitationem corporis
+          accusantium aspernatur architecto. Iure officiis commodi neque
+          exercitationem, minus corporis nobis consequuntur necessitatibus.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi sit
+          odio odit ab voluptatum quas exercitationem corporis accusantium
+          aspernatur architecto. Iure officiis commodi neque exercitationem,
+          minus corporis nobis consequuntur necessitatibus.
+        </div>
+        <div class="cont" id="cont3">
+          <h3>Content 3</h3>
+          Officiis commodi neque exercitationem, minus corporis nobis
+          consequuntur necessitatibus. Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Eligendi sit odio odit ab voluptatum quas
+          exercitationem corporis accusantium aspernatur architecto. Iure
+          officiis commodi neque exercitationem, minus corporis nobis
+          consequuntur necessitatibus.
+        </div>
+      </div>
+    </section>
+
+    <section id="count-section">
+      <h2>Word/Character Count</h2>
+      <textarea
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="Вставьте или напишите текст"
+      ></textarea>
+      <div id="word-count"></div>
+      <div id="char-count"></div>
+    </section>
+
+    <button id="scroll-btn">SCROLL UP</button>
+
+    <footer>This was practice lesson for DOM Manipulation in JavaScript</footer>
+    <script src="index.js"></script>
+    <script src="btn.js"></script>
+    <script src="scroll.js"></script>
+    <script src="accordeon.js"></script>
+  </body>
+</html>
